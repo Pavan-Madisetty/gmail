@@ -1,15 +1,19 @@
 const TODAY = '2026-08-14';
 const SBI_ATTACHMENT = './assets/AccountStatement_13082026_211903.pdf';
+const SBI_SENDER = 'cbssbi.cas@alerts.sbi.co.in';
 
 const messageSeeds = [
-  ['cbssbi@alerts.sbi.bank.in', 'cbssbi@alerts.sbi.bank.in', 'E-account statement for your SBI account(s).', 'Dear Miss. KATIKALA SAIKALA, your latest monthly account statement is attached.', 'SBI', '#0b72b9', true],
+  ['LinkedIn', 'messages-noreply@linkedin.com', 'Sasi, Priya accepted your connection request', 'You are now connected. See Priya’s recent updates and professional activity.', 'in', '#0a66c2'],
+  ['Facebook', 'notification@facebookmail.com', 'You have 4 new notifications', 'Anusha shared a photo, and 3 friends posted updates you may have missed.', 'f', '#1877f2'],
+  ['Instagram', 'no-reply@mail.instagram.com', 'sai.designs and 2 others shared new posts', 'See the latest posts and stories from accounts you follow.', '◎', '#d62976'],
+  ['cbssbi.cas', SBI_SENDER, 'E-account statement for your SBI account(s).', 'Dear Miss. KATIKALA SAIKALA, your latest monthly account statement is attached.', 'SBI', '#0b72b9', true],
   ['Google Calendar', 'calendar-notification@google.com', 'Reminder: Product design review @ 7:00 PM', 'This is a reminder for your upcoming event scheduled for this evening.', '31', '#4285f4'],
-  ['LinkedIn', 'messages-noreply@linkedin.com', 'Pavan, you appeared in 23 searches this week', 'See where your searchers work and what roles they are hiring for.', 'in', '#0a66c2'],
+  ['LinkedIn', 'messages-noreply@linkedin.com', 'Sasi, you appeared in 23 searches this week', 'See where your searchers work and what roles they are hiring for.', 'in', '#0a66c2'],
   ['GitHub', 'notifications@github.com', '[gmail-ui] Review requested: responsive inbox polish', 'A review was requested from you on pull request #48.', 'GH', '#24292f'],
   ['Amazon.in', 'shipment-tracking@amazon.in', 'Arriving today: Your Amazon.in order', 'Your package is out for delivery and should arrive by 9 PM.', 'a', '#ff9900'],
   ['HDFC Bank Alerts', 'alerts@hdfcbank.net', 'You have made a UPI transaction', 'Rs. 840.00 was debited from your HDFC Bank account.', 'H', '#004c8f'],
   ['Swiggy', 'no-reply@swiggy.in', 'Your order has been delivered', 'Hope you enjoyed your meal from Meghana Foods. Rate your order.', 'S', '#fc8019'],
-  ['Coursera', 'Coursera@email.coursera.org', 'Keep going, Pavan! You are 72% through this course', 'Complete the next module to keep your learning streak alive.', 'C', '#0056d2'],
+  ['Coursera', 'Coursera@email.coursera.org', 'Keep going, Sasi! You are 72% through this course', 'Complete the next module to keep your learning streak alive.', 'C', '#0056d2'],
   ['Notion', 'team@makenotion.com', '3 updates in Engineering workspace', 'Sanjay mentioned you in Gmail UI audit and shared a page.', 'N', '#111111'],
   ['Medium Daily Digest', 'noreply@medium.com', 'The frontend patterns that quietly make products feel premium', 'Five stories selected for you about JavaScript, CSS, and product design.', 'M', '#111111'],
   ['Google', 'no-reply@accounts.google.com', 'Security alert', 'A new sign-in on Mac was detected for your Google Account.', 'G', '#4285f4'],
@@ -19,7 +23,7 @@ const messageSeeds = [
   ['Microsoft Teams', 'noreply@email.teams.microsoft.com', 'You have new activity in Project Phoenix', 'Rahul mentioned you in the Frontend channel.', 'T', '#5b5fc7'],
   ['Netflix', 'info@account.netflix.com', 'New arrival: A title on your list is now available', 'We just added something you wanted to watch.', 'N', '#e50914'],
   ['Zomato', 'noreply@zomato.com', 'Here is your invoice for yesterday’s order', 'Invoice for order #5840291 is ready to view.', 'Z', '#e23744'],
-  ['Canva', 'no-reply@canva.com', 'Pavan, your weekly design recap is here', 'You created 4 designs and collaborated with 3 teammates.', 'C', '#7d2ae8'],
+  ['Canva', 'no-reply@canva.com', 'Sasi, your weekly design recap is here', 'You created 4 designs and collaborated with 3 teammates.', 'C', '#7d2ae8'],
   ['Slack', 'notification@slack.com', 'You have 7 new mentions in Dev Team', 'Catch up on messages from #frontend and #design-systems.', 'S', '#611f69'],
   ['YouTube', 'noreply@youtube.com', 'New videos from channels you follow', 'Fireship, Web Dev Simplified, and 4 others uploaded new videos.', '▶', '#ff0000'],
   ['Apple', 'no_reply@apple.com', 'Your receipt from Apple', 'Receipt for your recent App Store purchase.', 'A', '#555555'],
@@ -55,7 +59,7 @@ const messageSeeds = [
 ];
 
 const dateSlots = [
-  '2026-08-14T18:30:00+05:30','2026-08-14T17:45:00+05:30','2026-08-14T16:08:00+05:30','2026-08-14T14:32:00+05:30','2026-08-14T12:20:00+05:30','2026-08-14T10:44:00+05:30','2026-08-14T09:15:00+05:30','2026-08-14T07:38:00+05:30',
+  '2026-08-14T19:42:00+05:30','2026-08-14T19:18:00+05:30','2026-08-14T18:52:00+05:30','2026-08-14T18:30:00+05:30','2026-08-14T17:45:00+05:30','2026-08-14T16:08:00+05:30','2026-08-14T14:32:00+05:30','2026-08-14T12:20:00+05:30','2026-08-14T10:44:00+05:30','2026-08-14T09:15:00+05:30','2026-08-14T07:38:00+05:30',
   '2026-08-13T21:04:00+05:30','2026-08-13T18:12:00+05:30','2026-08-13T15:27:00+05:30','2026-08-13T12:05:00+05:30','2026-08-13T09:16:00+05:30',
   '2026-08-12T22:10:00+05:30','2026-08-12T17:48:00+05:30','2026-08-12T13:26:00+05:30','2026-08-12T08:30:00+05:30',
   '2026-08-11T20:42:00+05:30','2026-08-11T16:15:00+05:30','2026-08-11T11:09:00+05:30','2026-08-11T07:22:00+05:30',
@@ -64,12 +68,12 @@ const dateSlots = [
   '2026-08-08T19:49:00+05:30','2026-08-08T15:22:00+05:30','2026-08-08T10:34:00+05:30',
   '2026-08-07T22:06:00+05:30','2026-08-07T18:28:00+05:30','2026-08-07T14:16:00+05:30','2026-08-07T09:47:00+05:30',
   '2026-08-06T21:51:00+05:30','2026-08-06T17:33:00+05:30','2026-08-06T13:08:00+05:30','2026-08-06T08:19:00+05:30',
-  '2026-08-05T23:02:00+05:30','2026-08-05T20:40:00+05:30','2026-08-05T18:21:00+05:30','2026-08-05T16:09:00+05:30','2026-08-05T14:02:00+05:30','2026-08-05T12:18:00+05:30','2026-08-05T10:31:00+05:30','2026-08-05T09:05:00+05:30','2026-08-05T08:10:00+05:30','2026-08-05T07:15:00+05:30','2026-08-05T06:42:00+05:30'
+  '2026-08-05T23:02:00+05:30','2026-08-05T20:40:00+05:30','2026-08-05T18:21:00+05:30','2026-08-05T16:09:00+05:30','2026-08-05T14:02:00+05:30','2026-08-05T12:18:00+05:30','2026-08-05T10:31:00+05:30','2026-08-05T09:05:00+05:30'
 ];
 
 const unreadIndices = new Set([0, 1, 2, 3, 5, 7, 8, 10, 11, 13, 14, 18, 22, 26, 31, 37, 43, 48]);
 
-const emails = messageSeeds.map((seed, index) => ({
+const emails = messageSeeds.slice(0, 50).map((seed, index) => ({
   id: index + 1,
   sender: seed[0],
   email: seed[1],
@@ -95,6 +99,8 @@ const els = {
   unreadCount: document.getElementById('inbox-unread-count'),
   mobileCompose: document.getElementById('mobile-compose'),
   compose: document.getElementById('compose-window'),
+  recipientToggle: document.getElementById('recipient-toggle'),
+  recipientPopover: document.getElementById('recipient-popover'),
   toast: document.getElementById('toast')
 };
 
@@ -151,8 +157,12 @@ function updateUnreadCount() {
   document.title = `Inbox (${unread}) - Gmail`;
 }
 
+function isSbi(mail) {
+  return mail.email === SBI_SENDER;
+}
+
 function bodyFor(mail) {
-  if (mail.id === 1) {
+  if (isSbi(mail)) {
     return `
       <p>Dear Miss. KATIKALA SAIKALA,</p>
       <p>Your account(s) details are available at your fingertips. You can view them online whenever required. For your convenience, please find attached your latest monthly statement.</p>
@@ -163,7 +173,7 @@ function bodyFor(mail) {
   }
 
   return `
-    <p>Hi Pavan,</p>
+    <p>Hi Sasi,</p>
     <p>${escapeHtml(mail.snippet)}</p>
     <div class="callout"><strong>${escapeHtml(mail.subject)}</strong><br>Open this message to review the latest information and any actions that may be relevant to you.</div>
     <a class="email-button" href="#" data-demo-link>View details</a>
@@ -183,14 +193,19 @@ function openMessage(id) {
   document.getElementById('detail-date').textContent = formatFullDate(mail.date);
   document.getElementById('detail-position').textContent = `${emails.findIndex(item => item.id === id) + 1} of 4,814`;
   document.getElementById('detail-body').innerHTML = bodyFor(mail);
+  document.getElementById('recipient-from').textContent = `${mail.sender} <${mail.email}>`;
+  document.getElementById('recipient-date').textContent = formatFullDate(mail.date);
+  document.getElementById('recipient-subject').textContent = mail.subject;
+  els.recipientPopover.hidden = true;
+  els.recipientToggle.setAttribute('aria-expanded', 'false');
 
   const avatar = document.getElementById('sender-avatar');
-  avatar.classList.toggle('bank-avatar', mail.id === 1);
-  avatar.innerHTML = mail.id === 1 ? '<i class="fa-solid fa-user"></i>' : escapeHtml(mail.avatar);
-  avatar.style.background = mail.id === 1 ? '' : mail.color;
+  avatar.classList.toggle('bank-avatar', isSbi(mail));
+  avatar.innerHTML = isSbi(mail) ? '<i class="fa-solid fa-user"></i>' : escapeHtml(mail.avatar);
+  avatar.style.background = isSbi(mail) ? '' : mail.color;
 
   const unsubscribe = document.getElementById('detail-unsubscribe');
-  unsubscribe.hidden = mail.id !== 1;
+  unsubscribe.hidden = !isSbi(mail);
   document.getElementById('detail-attachment-indicator').hidden = !mail.hasAttachment;
 
   const detailStar = document.getElementById('detail-star');
@@ -238,6 +253,7 @@ function openMessage(id) {
 }
 
 function closeMessage() {
+  closeRecipientPopover();
   els.detailView.hidden = true;
   els.inboxView.hidden = false;
   els.mobileCompose.hidden = false;
@@ -246,6 +262,11 @@ function closeMessage() {
     const row = els.emailList.querySelector(`[data-id="${currentMessageId}"]`);
     if (row) row.focus({ preventScroll: true });
   });
+}
+
+function closeRecipientPopover() {
+  els.recipientPopover.hidden = true;
+  els.recipientToggle.setAttribute('aria-expanded', 'false');
 }
 
 function showToast(message) {
@@ -307,6 +328,19 @@ document.getElementById('detail-star').addEventListener('click', () => {
   openMessage(mail.id);
 });
 
+els.recipientToggle.addEventListener('click', event => {
+  event.stopPropagation();
+  const willOpen = els.recipientPopover.hidden;
+  els.recipientPopover.hidden = !willOpen;
+  els.recipientToggle.setAttribute('aria-expanded', String(willOpen));
+});
+
+document.getElementById('recipient-popover-close').addEventListener('click', event => {
+  event.stopPropagation();
+  closeRecipientPopover();
+  els.recipientToggle.focus();
+});
+
 document.getElementById('refresh-button').addEventListener('click', event => {
   const icon = event.currentTarget.querySelector('i');
   icon.style.transition = 'transform .45s ease';
@@ -335,6 +369,8 @@ document.getElementById('discard-button').addEventListener('click', () => { els.
 document.getElementById('send-button').addEventListener('click', () => { els.compose.hidden = true; showToast('Message sent'); });
 
 document.addEventListener('click', event => {
+  if (!els.recipientPopover.hidden && !event.target.closest('.sender-meta')) closeRecipientPopover();
+
   if (event.target.closest('[data-demo-link]')) {
     event.preventDefault();
     showToast('This link is part of the inbox demo');
@@ -366,7 +402,10 @@ document.addEventListener('keydown', event => {
 
 document.addEventListener('keydown', event => {
   if (event.key === 'Escape') {
-    if (!els.compose.hidden) els.compose.hidden = true;
+    if (!els.recipientPopover.hidden) {
+      closeRecipientPopover();
+      els.recipientToggle.focus();
+    } else if (!els.compose.hidden) els.compose.hidden = true;
     else if (!els.detailView.hidden) closeMessage();
   }
 });
