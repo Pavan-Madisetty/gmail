@@ -1,0 +1,12 @@
+{
+  "name": "gmail-clone",
+  "version": "1.0.0",
+  "description": "Gmail website clone created with HTML and Tailwind CSS",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": ["gmail", "clone", "tailwindcss", "html"],
+  "author": "Manik Maity",
+  "license": "MIT"
+}
