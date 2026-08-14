@@ -59,7 +59,7 @@ const messageSeeds = [
 ];
 
 const dateSlots = [
-  '2026-08-14T19:42:00+05:30','2026-08-14T19:18:00+05:30','2026-08-14T18:52:00+05:30','2026-08-14T18:30:00+05:30','2026-08-14T17:45:00+05:30','2026-08-14T16:08:00+05:30','2026-08-14T14:32:00+05:30','2026-08-14T12:20:00+05:30','2026-08-14T10:44:00+05:30','2026-08-14T09:15:00+05:30','2026-08-14T07:38:00+05:30',
+  '2026-08-14T20:05:00+05:30','2026-08-14T19:50:00+05:30','2026-08-14T19:35:00+05:30','2026-08-14T19:20:00+05:30','2026-08-14T17:45:00+05:30','2026-08-14T16:08:00+05:30','2026-08-14T14:32:00+05:30','2026-08-14T12:20:00+05:30','2026-08-14T10:44:00+05:30','2026-08-14T09:15:00+05:30','2026-08-14T07:38:00+05:30',
   '2026-08-13T21:04:00+05:30','2026-08-13T18:12:00+05:30','2026-08-13T15:27:00+05:30','2026-08-13T12:05:00+05:30','2026-08-13T09:16:00+05:30',
   '2026-08-12T22:10:00+05:30','2026-08-12T17:48:00+05:30','2026-08-12T13:26:00+05:30','2026-08-12T08:30:00+05:30',
   '2026-08-11T20:42:00+05:30','2026-08-11T16:15:00+05:30','2026-08-11T11:09:00+05:30','2026-08-11T07:22:00+05:30',
@@ -188,16 +188,22 @@ function openMessage(id) {
   updateUnreadCount();
 
   document.getElementById('detail-subject').textContent = mail.subject;
-  document.getElementById('detail-sender').textContent = mail.sender;
-  document.getElementById('detail-email').textContent = `<${mail.email}>`;
+  document.getElementById('detail-sender').textContent = isSbi(mail) ? mail.email : mail.sender;
+  document.getElementById('detail-email').textContent = isSbi(mail) ? '' : `<${mail.email}>`;
   document.getElementById('detail-date').textContent = formatFullDate(mail.date);
   document.getElementById('detail-position').textContent = `${emails.findIndex(item => item.id === id) + 1} of 4,814`;
   document.getElementById('detail-body').innerHTML = bodyFor(mail);
-  document.getElementById('recipient-from').textContent = `${mail.sender} <${mail.email}>`;
+  document.getElementById('recipient-from').textContent = mail.email;
   document.getElementById('recipient-date').textContent = formatFullDate(mail.date);
   document.getElementById('recipient-subject').textContent = mail.subject;
+  const senderDomain = mail.email.split('@')[1] || mail.email;
+  document.getElementById('recipient-mailedby').textContent = senderDomain;
+  document.getElementById('recipient-signedby').textContent = senderDomain;
+  document.getElementById('recipient-unsubscribe-label').hidden = !isSbi(mail);
+  document.getElementById('recipient-unsubscribe-value').hidden = !isSbi(mail);
   els.recipientPopover.hidden = true;
   els.recipientToggle.setAttribute('aria-expanded', 'false');
+  document.querySelector('.subject-chevron').classList.toggle('important', isSbi(mail));
 
   const avatar = document.getElementById('sender-avatar');
   avatar.classList.toggle('bank-avatar', isSbi(mail));
@@ -333,12 +339,6 @@ els.recipientToggle.addEventListener('click', event => {
   const willOpen = els.recipientPopover.hidden;
   els.recipientPopover.hidden = !willOpen;
   els.recipientToggle.setAttribute('aria-expanded', String(willOpen));
-});
-
-document.getElementById('recipient-popover-close').addEventListener('click', event => {
-  event.stopPropagation();
-  closeRecipientPopover();
-  els.recipientToggle.focus();
 });
 
 document.getElementById('refresh-button').addEventListener('click', event => {

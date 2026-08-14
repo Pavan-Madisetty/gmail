@@ -130,14 +130,14 @@ button { color: inherit; }
 .recipient-line:hover { background: #f1f3f4; color: #3c4043; }
 .recipient-line i { margin-left: 2px; transition: transform .15s ease; }
 .recipient-line[aria-expanded="true"] i { transform: rotate(180deg); }
-.recipient-popover { position: absolute; z-index: 12; top: 38px; left: -10px; width: 420px; max-width: calc(100vw - 110px); padding: 13px 16px 15px; border: 1px solid #dadce0; border-radius: 8px; background: #fff; box-shadow: 0 4px 14px rgba(60,64,67,.28); color: #3c4043; font-size: 12px; }
-.recipient-popover-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
-.recipient-popover-header strong { font-size: 13px; color: #202124; }
-.recipient-popover-header button { width: 28px; height: 28px; margin: -6px -8px -4px 0; border: 0; border-radius: 50%; background: transparent; display: grid; place-items: center; color: #5f6368; font-size: 20px; cursor: pointer; }
-.recipient-popover-header button:hover { background: #f1f3f4; }
-.recipient-popover dl { margin: 0; display: grid; grid-template-columns: 54px minmax(0, 1fr); column-gap: 8px; row-gap: 7px; }
+.recipient-popover { position: absolute; z-index: 12; top: 34px; left: 40px; width: 426px; max-width: calc(100vw - 110px); padding: 18px 20px 20px; border: 1px solid #c8c8c8; border-radius: 0; background: #fff; box-shadow: 0 2px 7px rgba(60,64,67,.3); color: #303134; font-size: 14px; }
+.recipient-popover dl { margin: 0; display: grid; grid-template-columns: 82px minmax(0, 1fr); column-gap: 12px; row-gap: 8px; }
 .recipient-popover dt { color: #777b80; text-align: right; }
 .recipient-popover dd { min-width: 0; margin: 0; color: #202124; overflow-wrap: anywhere; }
+.recipient-popover a { color: #202124; text-decoration: underline; }
+.recipient-lock { color: #777b80; font-size: 12px; }
+.importance-marker { display: inline-block; width: 0; height: 0; border-top: 7px solid transparent; border-bottom: 7px solid transparent; border-left: 10px solid #f6c453; vertical-align: -2px; }
+.subject-chevron.important { color: #f6c453; }
 .message-actions { display: flex; align-items: center; gap: 0; color: var(--muted); }
 .message-actions > span { margin-right: 7px; font-size: 12px; white-space: nowrap; }
 .detail-paperclip { margin-right: 10px; color: #747775; font-size: 15px; }

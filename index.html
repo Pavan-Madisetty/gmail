@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="A realistic, interactive Gmail-style inbox demo.">
   <title>Inbox (18) - Gmail</title>
-  <link rel="icon" href="./assets/gmail-logo.png">
+  <link rel="icon" href="./assets/gmail-favicon.ico" sizes="any">
   <link rel="preconnect" href="https://cdnjs.cloudflare.com">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <link rel="stylesheet" href="./style.css">
@@ -124,13 +124,16 @@
               <div><strong id="detail-sender"></strong> <span id="detail-email"></span><a id="detail-unsubscribe" class="unsubscribe-link" href="#">Unsubscribe</a></div>
               <button class="recipient-line" id="recipient-toggle" type="button" aria-expanded="false" aria-controls="recipient-popover">to me <i class="fa-solid fa-caret-down"></i></button>
               <div class="recipient-popover" id="recipient-popover" hidden>
-                <div class="recipient-popover-header"><strong>Message details</strong><button id="recipient-popover-close" type="button" aria-label="Close message details">×</button></div>
                 <dl>
                   <dt>from:</dt><dd id="recipient-from"></dd>
                   <dt>to:</dt><dd>Sasi &lt;sasi.katikala@gmail.com&gt;</dd>
                   <dt>date:</dt><dd id="recipient-date"></dd>
                   <dt>subject:</dt><dd id="recipient-subject"></dd>
-                  <dt>security:</dt><dd>Standard encryption (TLS)</dd>
+                  <dt>mailed-by:</dt><dd id="recipient-mailedby"></dd>
+                  <dt>signed-by:</dt><dd id="recipient-signedby"></dd>
+                  <dt id="recipient-unsubscribe-label">unsubscribe:</dt><dd id="recipient-unsubscribe-value"><a href="#" data-demo-link>Unsubscribe from this sender</a></dd>
+                  <dt>security:</dt><dd><i class="fa-solid fa-lock recipient-lock"></i> Standard encryption (TLS) <a href="#" data-demo-link>Learn more</a></dd>
+                  <dt><span class="importance-marker"></span>:</dt><dd>Important according to Google magic.</dd>
                 </dl>
               </div>
             </div>
