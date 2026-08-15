@@ -126,7 +126,8 @@ button { color: inherit; }
 .sender-meta > div { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .sender-meta strong { font-size: 14px; }
 .sender-meta #detail-email { color: var(--muted); font-size: 12px; }
-.verified-badge { margin-left: 4px; color: #1a73e8; font-size: 14px; vertical-align: -1px; }
+.verified-badge { width: 16px; height: 16px; margin-left: 4px; display: inline-block; vertical-align: -3px; }
+.verified-badge img { width: 16px; height: 16px; display: block; }
 .unsubscribe-link { margin-left: 12px; color: #0b57d0; font-size: 13px; font-weight: 500; text-decoration: none; }
 .unsubscribe-link:hover { text-decoration: underline; }
 .recipient-line { padding: 1px 3px 1px 0; border: 0; border-radius: 3px; background: transparent; color: var(--muted); font-size: 12px; cursor: pointer; }
@@ -139,8 +140,9 @@ button { color: inherit; }
 .recipient-popover dd { min-width: 0; margin: 0; color: #202124; overflow-wrap: anywhere; }
 .recipient-popover a { color: #202124; text-decoration: underline; }
 .recipient-lock { color: #777b80; font-size: 12px; }
-.importance-marker { display: inline-block; width: 0; height: 0; border-top: 7px solid transparent; border-bottom: 7px solid transparent; border-left: 10px solid #f6c453; vertical-align: -2px; }
-.subject-chevron.important { color: #f6c453; }
+.importance-marker { display: inline-block; width: 20px; height: 18px; background: url('./assets/important-marker.png') center / contain no-repeat; vertical-align: -4px; }
+.subject-chevron.important { width: 22px; height: 20px; margin-top: 5px; background: url('./assets/important-marker.png') center / contain no-repeat; color: transparent; font-size: 0; }
+.subject-chevron.important::before { content: none; }
 .message-actions { display: flex; align-items: center; gap: 0; color: var(--muted); }
 .message-actions > span { margin-right: 7px; font-size: 12px; white-space: nowrap; }
 .detail-paperclip { margin-right: 10px; color: #747775; font-size: 15px; }
