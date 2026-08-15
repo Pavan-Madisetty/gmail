@@ -166,10 +166,10 @@ function bodyFor(mail) {
   if (isSbi(mail)) {
     return `
       <p>Dear Miss. KATIKALA SAIKALA,</p>
-      <p>Your account(s) details are available at your fingertips. You can view them online whenever required. For your convenience, please find attached your latest monthly statement.</p>
+      <p>Your account(s) details are available at your fingertips. We are pleased to share your requested account statement (attached below). Your account statement is protected by a password.</p>
       <p>Your e-account statement is protected by a password, which is the last five digits of customer registered mobile number and date of birth (DOB) in DDMMYY format registered with Bank, for example if mobile number is XXXXX12345 and DOB is 16th September 1982 then password will be 12345160982.</p>
       <p>In case of any issues, please lodge a complaint online at <a href="mailto:contactcentre@sbi.co.in">contactcentre@sbi.co.in</a> or by calling our 1800 1234 or 1800 2100 toll free numbers or by contacting your home branch.</p>
-      <p class="signature">With Best Regards,<br><strong>Team SBI</strong></p>
+      <p class="signature">With Best Regards,<br>Team SBI</p>
       <p class="computer-note"><strong>** Please note:</strong> You will need Adobe Acrobat to open the attachment. Please do not reply to this email as it is a computer generated email.</p>`;
   }
 
