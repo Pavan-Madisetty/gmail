@@ -123,11 +123,11 @@ button { color: inherit; }
 .sender-avatar.bank-avatar { width: 56px; height: 40px; border-radius: 0; background: transparent; }
 .sender-avatar.bank-avatar img { width: 54px; height: auto; max-height: 28px; display: block; object-fit: contain; }
 .sender-meta { position: relative; min-width: 0; padding-top: 1px; }
-.sender-meta > div { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.sender-meta > div:first-child { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .sender-meta strong { font-size: 14px; }
 .sender-meta #detail-email { color: var(--muted); font-size: 12px; }
-.verified-badge { width: 16px; height: 16px; margin-left: 4px; display: inline-block; vertical-align: -3px; }
-.verified-badge img { width: 16px; height: 16px; display: block; }
+.verified-badge { width: 16px; height: 16px; margin-left: 4px; display: inline-flex; align-items: center; justify-content: center; vertical-align: -3px; }
+.verified-badge img { width: auto; height: auto; max-width: 16px; max-height: 16px; aspect-ratio: 1 / 1; object-fit: contain; display: block; }
 .unsubscribe-link { margin-left: 12px; color: #0b57d0; font-size: 13px; font-weight: 500; text-decoration: none; }
 .unsubscribe-link:hover { text-decoration: underline; }
 .recipient-line { padding: 1px 3px 1px 0; border: 0; border-radius: 3px; background: transparent; color: var(--muted); font-size: 12px; cursor: pointer; }
