@@ -126,9 +126,10 @@ button { color: inherit; }
 .sender-meta > div:first-child { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .sender-meta strong { font-size: 14px; }
 .sender-meta #detail-email { color: var(--muted); font-size: 12px; }
-.verified-badge { width: 16px; height: 16px; margin-left: 4px; display: inline-flex; align-items: center; justify-content: center; vertical-align: -3px; }
-.verified-badge img { width: auto; height: auto; max-width: 16px; max-height: 16px; aspect-ratio: 1 / 1; object-fit: contain; display: block; }
+.verified-badge { width: 14px; height: 14px; margin: 2px 8px 0 2px; display: inline-flex; align-items: center; justify-content: center; vertical-align: -3px; }
+.verified-badge img { width: auto; height: auto; max-width: 14px; max-height: 14px; aspect-ratio: 1 / 1; object-fit: contain; display: block; }
 .unsubscribe-link { margin-left: 12px; color: #0b57d0; font-size: 13px; font-weight: 500; text-decoration: none; }
+.verified-badge + .unsubscribe-link { margin-left: 0; }
 .unsubscribe-link:hover { text-decoration: underline; }
 .recipient-line { padding: 1px 3px 1px 0; border: 0; border-radius: 3px; background: transparent; color: var(--muted); font-size: 12px; cursor: pointer; }
 .recipient-line:hover { background: #f1f3f4; color: #3c4043; }
