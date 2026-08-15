@@ -119,11 +119,14 @@ button { color: inherit; }
 .subject-actions .icon-button { width: 34px; height: 34px; }
 .sender-line { display: grid; grid-template-columns: 42px minmax(0, 1fr) auto; align-items: start; gap: 14px; margin-top: 6px; }
 .sender-avatar { width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; color: #fff; background: #5f6368; font-size: 15px; font-weight: 600; }
-.sender-avatar.bank-avatar { background: #a8c7fa; color: #3f72d8; font-size: 22px; }
+.sender-line.sbi-sender { grid-template-columns: 58px minmax(0, 1fr) auto; }
+.sender-avatar.bank-avatar { width: 56px; height: 40px; border-radius: 0; background: transparent; }
+.sender-avatar.bank-avatar img { width: 54px; height: auto; max-height: 28px; display: block; object-fit: contain; }
 .sender-meta { position: relative; min-width: 0; padding-top: 1px; }
 .sender-meta > div { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .sender-meta strong { font-size: 14px; }
 .sender-meta #detail-email { color: var(--muted); font-size: 12px; }
+.verified-badge { margin-left: 4px; color: #1a73e8; font-size: 14px; vertical-align: -1px; }
 .unsubscribe-link { margin-left: 12px; color: #0b57d0; font-size: 13px; font-weight: 500; text-decoration: none; }
 .unsubscribe-link:hover { text-decoration: underline; }
 .recipient-line { padding: 1px 3px 1px 0; border: 0; border-radius: 3px; background: transparent; color: var(--muted); font-size: 12px; cursor: pointer; }
@@ -243,6 +246,7 @@ button { color: inherit; }
   .subject-line h1 { font-size: 19px; line-height: 26px; }
   .subject-actions { display: none; }
   .sender-line { grid-template-columns: 40px minmax(0, 1fr); gap: 10px; }
+  .sender-line.sbi-sender { grid-template-columns: 56px minmax(0, 1fr); }
   .message-actions { grid-column: 2; justify-self: end; margin-top: -4px; }
   .message-actions .icon-button:not(#detail-star) { display: none; }
   .message-body, .attachment-area, .reply-actions { margin-left: 50px; margin-right: 0; }

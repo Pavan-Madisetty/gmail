@@ -1,12 +1,13 @@
 const TODAY = '2026-08-14';
 const SBI_ATTACHMENT = './assets/AccountStatement_13082026_211903.pdf';
-const SBI_SENDER = 'cbssbi.cas@alerts.sbi.co.in';
+const SBI_SENDER = 'cbssbi.cas@alerts.sbi.bank.in';
+const SBI_SUBJECT = 'Statement of your SBI AccountNumber XXXXXX70188';
 
 const messageSeeds = [
   ['LinkedIn', 'messages-noreply@linkedin.com', 'Sasi, Priya accepted your connection request', 'You are now connected. See Priya’s recent updates and professional activity.', 'in', '#0a66c2'],
   ['Facebook', 'notification@facebookmail.com', 'You have 4 new notifications', 'Anusha shared a photo, and 3 friends posted updates you may have missed.', 'f', '#1877f2'],
   ['Instagram', 'no-reply@mail.instagram.com', 'sai.designs and 2 others shared new posts', 'See the latest posts and stories from accounts you follow.', '◎', '#d62976'],
-  ['cbssbi.cas', SBI_SENDER, 'E-account statement for your SBI account(s).', 'Dear Miss. KATIKALA SAIKALA, your latest monthly account statement is attached.', 'SBI', '#0b72b9', true],
+  ['cbssbi.cas', SBI_SENDER, SBI_SUBJECT, 'Dear Miss. KATIKALA SAIKALA, your latest monthly account statement is attached.', 'SBI', '#0b72b9', true],
   ['Google Calendar', 'calendar-notification@google.com', 'Reminder: Product design review @ 7:00 PM', 'This is a reminder for your upcoming event scheduled for this evening.', '31', '#4285f4'],
   ['LinkedIn', 'messages-noreply@linkedin.com', 'Sasi, you appeared in 23 searches this week', 'See where your searchers work and what roles they are hiring for.', 'in', '#0a66c2'],
   ['GitHub', 'notifications@github.com', '[gmail-ui] Review requested: responsive inbox polish', 'A review was requested from you on pull request #48.', 'GH', '#24292f'],
@@ -204,10 +205,12 @@ function openMessage(id) {
   els.recipientPopover.hidden = true;
   els.recipientToggle.setAttribute('aria-expanded', 'false');
   document.querySelector('.subject-chevron').classList.toggle('important', isSbi(mail));
+  document.getElementById('verified-badge').hidden = !isSbi(mail);
 
   const avatar = document.getElementById('sender-avatar');
   avatar.classList.toggle('bank-avatar', isSbi(mail));
-  avatar.innerHTML = isSbi(mail) ? '<i class="fa-solid fa-user"></i>' : escapeHtml(mail.avatar);
+  document.querySelector('.sender-line').classList.toggle('sbi-sender', isSbi(mail));
+  avatar.innerHTML = isSbi(mail) ? '<img src="./assets/sbi-logo.png" alt="SBI">' : escapeHtml(mail.avatar);
   avatar.style.background = isSbi(mail) ? '' : mail.color;
 
   const unsubscribe = document.getElementById('detail-unsubscribe');
