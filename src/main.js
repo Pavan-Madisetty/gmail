@@ -10,7 +10,7 @@ const messageSeeds = [
   ['LinkedIn', 'messages-noreply@linkedin.com', 'Sasi, Priya accepted your connection request', 'You are now connected. See Priya’s recent updates and professional activity.', 'in', '#0a66c2'],
   ['Facebook', 'notification@facebookmail.com', 'You have 4 new notifications', 'Anusha shared a photo, and 3 friends posted updates you may have missed.', 'f', '#1877f2'],
   ['Instagram', 'no-reply@mail.instagram.com', 'sai.designs and 2 others shared new posts', 'See the latest posts and stories from accounts you follow.', '◎', '#d62976'],
-  ['cbssbi.cas', SBI_SENDER, SBI_SUBJECT, 'Dear Miss. KATIKALA SAIKALA, your latest monthly account statement is attached.', 'SBI', '#0b72b9', true],
+  ['cbssbi.cas', SBI_SENDER, SBI_SUBJECT, 'Dear Miss. KATIKALA SASIKALA, your requested account statement is attached.', 'SBI', '#0b72b9', true],
   ['Google Calendar', 'calendar-notification@google.com', 'Reminder: Product design review @ 7:00 PM', 'This is a reminder for your upcoming event scheduled for this evening.', '31', '#4285f4'],
   ['LinkedIn', 'messages-noreply@linkedin.com', 'Sasi, you appeared in 23 searches this week', 'See where your searchers work and what roles they are hiring for.', 'in', '#0a66c2'],
   ['GitHub', 'notifications@github.com', '[gmail-ui] Review requested: responsive inbox polish', 'A review was requested from you on pull request #48.', 'GH', '#24292f'],
