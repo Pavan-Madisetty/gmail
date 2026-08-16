@@ -1,9 +1,12 @@
-const TODAY = '2026-08-14';
+const TODAY = '2026-08-16';
 const SBI_ATTACHMENT = './assets/AccountStatement_13082026_211903.pdf';
 const SBI_SENDER = 'cbssbi.cas@alerts.sbi.bank.in';
 const SBI_SUBJECT = 'Statement of your SBI AccountNumber XXXXXX70188';
 
 const messageSeeds = [
+  ['Ravi Kumar', 'ravi.kumar.photos@gmail.com', 'Photos from today’s appointment', 'I have attached the photos we discussed this morning. Please check and confirm once received.', 'R', '#188038'],
+  ['Meera Sharma', 'meera.sharma.docs@gmail.com', 'Passport copy and ID proof', 'Sharing the scanned passport copy and address proof documents for your reference.', 'M', '#8e24aa'],
+  ['Anusha Reddy', 'anusha.reddy.personal@gmail.com', 'Personal documents for verification', 'Please find the PAN card photo and signed form attached for the verification process.', 'A', '#d93025'],
   ['LinkedIn', 'messages-noreply@linkedin.com', 'Sasi, Priya accepted your connection request', 'You are now connected. See Priya’s recent updates and professional activity.', 'in', '#0a66c2'],
   ['Facebook', 'notification@facebookmail.com', 'You have 4 new notifications', 'Anusha shared a photo, and 3 friends posted updates you may have missed.', 'f', '#1877f2'],
   ['Instagram', 'no-reply@mail.instagram.com', 'sai.designs and 2 others shared new posts', 'See the latest posts and stories from accounts you follow.', '◎', '#d62976'],
@@ -60,6 +63,7 @@ const messageSeeds = [
 ];
 
 const dateSlots = [
+  '2026-08-16T08:30:00+05:30','2026-08-16T08:12:00+05:30','2026-08-16T07:48:00+05:30',
   '2026-08-14T20:05:00+05:30','2026-08-14T19:50:00+05:30','2026-08-14T19:35:00+05:30','2026-08-14T19:20:00+05:30','2026-08-14T17:45:00+05:30','2026-08-14T16:08:00+05:30','2026-08-14T14:32:00+05:30','2026-08-14T12:20:00+05:30','2026-08-14T10:44:00+05:30','2026-08-14T09:15:00+05:30','2026-08-14T07:38:00+05:30',
   '2026-08-13T21:04:00+05:30','2026-08-13T18:12:00+05:30','2026-08-13T15:27:00+05:30','2026-08-13T12:05:00+05:30','2026-08-13T09:16:00+05:30',
   '2026-08-12T22:10:00+05:30','2026-08-12T17:48:00+05:30','2026-08-12T13:26:00+05:30','2026-08-12T08:30:00+05:30',
